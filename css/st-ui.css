@@ -68,7 +68,9 @@ input::-webkit-input-placeholder {
     width: 100%;
     height: 8vh;
     background: #F8F8F8;
-    margin: auto;
+    position: fixed;
+    top: 0;
+    z-index: 333;
 }
 
 .st_navbar_box {
@@ -149,6 +151,30 @@ a:hover {
     background: #888888;
 }
 
+/* 菜单（移动端） */
+
+.st_navbar_menu_phone {
+    width: 100%;
+    padding-top: 8vh;
+    background: #F8F8F8;
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+.st_navbar_menu_phone ul {
+    width: 90%;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-top: 1px solid gainsboro;
+    margin: auto;
+}
+
+.st_navbar_menu_phone li {
+    list-style: none;
+    margin-top: 5px;
+}
+
 /**
  中等屏幕 桌面显示器(笔记本)
  */
@@ -170,6 +196,9 @@ a:hover {
         display: none;
     }
     .st_navbar_list_btn {
+        display: block;
+    }
+    .st_navbar_menu_phone {
         display: block;
     }
 }
