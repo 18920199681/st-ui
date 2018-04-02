@@ -175,6 +175,11 @@ a:hover {
     margin-top: 5px;
 }
 
+.st_navbar_menu_height {
+    width: 100%;
+    height: 8vh;
+}
+
 /**
  中等屏幕 桌面显示器(笔记本)
  */

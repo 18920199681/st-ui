@@ -19,61 +19,27 @@
 <body>
     <!-- 导航条 -->
     <div class="st_navbar"></div>
-    <!-- 下拉菜单（移动端） -->
-    <div class="st_navbar_menu_height" style="width:100%; height:8vh;"></div>
+    <div class="st_navbar_menu_height"></div>
     <div class="st_navbar_menu_phone">
-        <ul>
-            <a href="javascript:;">
-                <li>首页</li>
-            </a>
-            <a href="javascript:;">
-                <li>新闻页</li>
-            </a>
-        </ul>
+        <ul>&nbsp;</ul>
     </div>
 
     <!-- test -->
-    <div style="width:100%; height:120vh; background:red;">
-        萨芬大师的大幅杀跌
-    </div>
+    <!-- <div style="width:100%; height:120vh; background:red;">
+        测试
+    </div> -->
 
     <script src="./js/jquery-1.10.1.min.js"></script>
     <script src="./js/moveBox.js"></script>
     <script src="./js/st-ui.js"></script>
     <script>
         $(function () {
+            // 导航条
             st_navbar({
                 logo: './images/logo.png',
                 company_name: '不愁吃',
                 navbar_menu: ["首页", "第二页", "第三页"]
             });
-
-            // 菜单（移动端）
-            $('body').find('.st_navbar_menu_phone').css('top', -($('.st_navbar_menu_phone')[0].offsetHeight));
-            $('body').find('.st_navbar_list_btn').on('click', function () {
-
-                // 导航条高度
-                let st_navbar_height = $('.st_navbar')[0].offsetHeight;
-                let old_height = $('.st_navbar')[0].offsetHeight;
-
-                // 导航条挡板高度
-                let st_navbar_menu_height_box = document.querySelector('.st_navbar_menu_height');
-                let st_navbar_menu_height = $('.st_navbar_menu_height')[0].offsetHeight;
-
-                // 菜单高度
-                let st_navbar_menu_phone = $('.st_navbar_menu_phone')[0].offsetHeight;
-
-                // 菜单top
-                let st_navbar_menu_phone_top = document.querySelector('.st_navbar_menu_phone');
-
-                if (st_navbar_height == st_navbar_menu_height) {
-                    startMove(st_navbar_menu_height_box, { 'height': st_navbar_menu_phone });
-                    startMove(st_navbar_menu_phone_top, { 'top': 0 });
-                } else {
-                    startMove(st_navbar_menu_height_box, { 'height': old_height });
-                    startMove(st_navbar_menu_phone_top, { 'top': -st_navbar_menu_phone });
-                }
-            })
         })
     </script>
 </body>
