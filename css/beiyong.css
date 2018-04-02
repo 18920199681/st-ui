@@ -1,0 +1,27 @@
+/**
+ 默认
+ */
+
+/**
+   中等屏幕 桌面显示器(笔记本)
+   */
+
+@media (min-width: 970px) and (max-width: 1170px) {}
+
+/**
+   手机  
+   */
+
+@media (min-width: 320px) and (max-width: 750px) {}
+
+/**
+   平板
+   */
+
+@media (min-width: 750px) and (max-width: 970px) {}
+
+/**
+ 大屏幕 大桌面显示器
+ */
+
+@media (min-width: 1170px) {}

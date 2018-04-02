@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+
+    <link href="./css/st-ui.css" rel="stylesheet" />
+
+    <title>st-ui</title>
+</head>
+
+<body>
+    <!-- 遮罩 -->
+    <!-- <div class="task_box"></div> -->
+
+    <script src="./js/jquery-1.10.1.min.js"></script>
+    <script src="./js/moveBox.js"></script>
+    <script src="./js/st-ui.js"></script>
+    <script>
+        $(function () {
+            st_navbar({
+                logo: './images/logo.png',
+                company_name: '不愁吃',
+                navbar_menu: ["首页", "第二页", "第三页"]
+            });
+        })
+    </script>
+</body>
+
+</html>

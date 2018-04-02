@@ -1,0 +1,217 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input {
+    outline: none;
+}
+
+input:-moz-placeholder {
+    color: #8E8E8E;
+    opacity: 0.5;
+}
+
+::-moz-placeholder {
+    color: #8E8E8E;
+    opacity: 0.5;
+}
+
+input:-ms-input-placeholder {
+    color: #8E8E8E;
+    opacity: 0.5;
+}
+
+input::-webkit-input-placeholder {
+    color: #8E8E8E;
+    opacity: 0.5;
+}
+
+.clearFloat:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.single_hide {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.more_hide {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.task_box {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1111;
+    background: black;
+    opacity: 0.6;
+    display: none;
+}
+
+/**
+ *导航条
+ */
+
+.st_navbar {
+    width: 100%;
+    height: 8vh;
+    background: #F8F8F8;
+    margin: auto;
+}
+
+.st_navbar_box {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+.st_navbar_list, .st_navbar_left {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.st_navbar_logo {
+    height: 100%;
+    float: left;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.st_navbar_logo img {
+    height: 60%;
+}
+
+.st_navbar_company_name {
+    line-height: 8vh;
+    float: left;
+}
+
+.st_navbar_list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.st_navbar_list li {
+    float: left;
+    list-style: none;
+    margin-left: 20px;
+}
+
+a {
+    color: #999999;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+/* 菜单按钮 */
+
+.st_navbar_list_btn {
+    width: 45px;
+    height: 36px;
+    border-radius: 5px;
+    border: 1px solid #DDDDDD;
+    display: none;
+}
+
+.st_navbar_list_btn div {
+    width: 60%;
+    height: 16px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.st_bavbar_list_btn_line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 5px;
+    background: #888888;
+}
+
+.st_body_box {
+    width: 100%;
+    background: #F8F8F8;
+    position: relative;
+}
+
+.st_navbar_list_phone {
+    width: 90%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: none;
+}
+
+.st_navbar_list_phone li {
+    list-style: none;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* .st_body {
+    width: 100%;
+    height: 92vh;
+    background: white;
+    position: absolute;
+    top: 0;
+} */
+
+/**
+ 中等屏幕 桌面显示器(笔记本)
+ */
+
+@media (min-width: 970px) and (max-width: 1170px) {}
+
+/**
+ 手机
+ */
+
+@media (min-width: 320px) and (max-width: 750px) {
+    .st_navbar_box {
+        width: 90%;
+    }
+    .st_navbar_company_name {
+        display: none;
+    }
+    .st_navbar_list ul {
+        display: none;
+    }
+    .st_navbar_list_btn {
+        display: block;
+    }
+    .st_navbar_list_phone {
+        display: block;
+        border-top: 1px solid #DDDDDD;
+    }
+}
+
+/**
+ 平板
+ */
+
+@media (min-width: 750px) and (max-width: 970px) {}
+
+/**
+ 大屏幕 大桌面显示器
+ */
+
+@media (min-width: 1170px) {}
