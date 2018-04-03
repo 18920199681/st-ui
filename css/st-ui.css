@@ -61,7 +61,7 @@ input::-webkit-input-placeholder {
 }
 
 /**
- *导航条
+ * 头部导航条
  */
 
 .st_navbar {
@@ -126,7 +126,7 @@ a:hover {
     color: black;
 }
 
-/* 菜单按钮 */
+/* 头部导航条菜单按钮 */
 
 .st_navbar_list_btn {
     width: 45px;
@@ -151,7 +151,7 @@ a:hover {
     background: #888888;
 }
 
-/* 菜单（移动端） */
+/* 头部导航条菜单（移动端） */
 
 .st_navbar_menu_phone {
     width: 100%;
@@ -180,17 +180,67 @@ a:hover {
     height: 8vh;
 }
 
-/**
- 中等屏幕 桌面显示器(笔记本)
- */
+/* 侧边栏 */
+.st_left_navbar {
+    width: 100%;
+    height: 92vh;
+    background: gainsboro;
+    padding-top: 30px;
+}
 
-@media (min-width: 970px) and (max-width: 1170px) {}
+.st_left_navbar li {
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    color: #999999;
+    display: flex;
+    align-items: center;
+    line-height: 50px;
+}
+
+.st_second_nav_box {
+    display: none;
+}
+
+.st_second_nav_box li {
+    padding-left: 25px;
+    font-size: 15px;
+}
+
+.st_first_nav_title {
+    display: block;
+    width: 80%;
+    height: 100%;
+    float: left;
+}
+
+.st_first_nav_arrow {
+    display: block;
+    width: 20%;
+    height: 100%;
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+.st_first_nav_arrow img {
+    height: 30%;
+}
+
+.first_menu_arrow_right {
+    display: block;
+}
+
+.first_menu_arrow_bottom {
+    display: none;
+}
 
 /**
  手机
  */
 
 @media (min-width: 320px) and (max-width: 750px) {
+    /* 头部导航条 */
     .st_navbar_box {
         width: 90%;
     }
@@ -219,3 +269,9 @@ a:hover {
  */
 
 @media (min-width: 1170px) {}
+
+/**
+ 中等屏幕 桌面显示器(笔记本)
+ */
+
+@media (min-width: 970px) and (max-width: 1170px) {}

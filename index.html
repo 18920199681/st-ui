@@ -16,28 +16,11 @@
     <title>st-ui</title>
 
     <style>
-        .st_left_navbar {
-            width: 100%;
-            height: 92vh;
-            background: gainsboro;
-            padding-top: 30px;
-        }
-
-        .st_left_navbar li {
-            width: 100%;
-            padding: 10px 20px;
-            color: #999999;
-        }
-
-        .st_second_nav_box li {
-            padding: 10px 25px;
-            font-size: 15px;
-        }
     </style>
 </head>
 
 <body>
-    <!-- 导航条 -->
+    <!-- 头部导航条 -->
     <div class="st_navbar"></div>
     <div class="st_navbar_menu_height"></div>
     <div class="st_navbar_menu_phone">
@@ -53,14 +36,30 @@
 
         <div class="st_left_navbar">
             <ul>
-                <li class="st_first_nav st_open_second">第一个</li>
-                <ul class="st_second_nav_box">
+                <li class="st_first_nav st_open_second clearFloat">
+                    <span class="st_first_nav_title">
+                        第一个
+                    </span>
+                    <span class="st_first_nav_arrow">
+                        <img class="first_menu_arrow_right" src="./images/first_menu_arrow_right.png" style="display:none;" />
+                        <img class="first_menu_arrow_bottom" src="./images/first_menu_arrow_bottom.png" style="display:block;" />
+                    </span>
+                </li>
+                <ul class="st_second_nav_box" style="display:block;">
                     <li class="st_second_nav st_get_into">二级一</li>
                     <li class="st_second_nav st_get_into">二级二</li>
                     <li class="st_second_nav st_get_into">二级三</li>
                 </ul>
 
-                <li class="st_first_nav st_open_second">第二个</li>
+                <li class="st_first_nav st_open_second clearFloat">
+                    <span class="st_first_nav_title">
+                        第二个
+                    </span>
+                    <span class="st_first_nav_arrow">
+                        <img class="first_menu_arrow_right" src="./images/first_menu_arrow_right.png" />
+                        <img class="first_menu_arrow_bottom" src="./images/first_menu_arrow_bottom.png" />
+                    </span>
+                </li>
                 <ul class="st_second_nav_box">
                     <li class="st_second_nav st_get_into">二级一</li>
                     <li class="st_second_nav st_get_into">二级二</li>
@@ -77,26 +76,15 @@
     <script src="./js/st-ui.js"></script>
     <script>
         $(function () {
-            // 导航条
+            // 头部导航条
             st_navbar({
                 logo: './images/logo.png',
                 company_name: 'company_name',
                 navbar_menu: ["首页", "第二页", "第三页"]
             });
-        })
 
-        // 侧边栏
-        $(function () {
-            var item = $('.st_left_navbar li')
-            for (var i = 0; i < item.length; i++) {
-                item[i].index = i;
-                item[i].onmouseover = function () {
-                    item[this.index].style.background = 'white';
-                }
-                item[i].onmouseout = function () {
-                    item[this.index].style.background = 'gainsboro';
-                }
-            }
+            // 侧边栏
+            st_sidebar();
         })
     </script>
 </body>
