@@ -18,8 +18,12 @@ js文件夹下的 st-ui.js 文件；
 ## 导航条
 
 ##### 效果演示
-![navbar]
-(https://github.com/18920199681/st-ui/effect_img/navbar_pc.png)
+
+###### pc端效果图 :
+![navbar](./effect_img/navbar_pc.png)
+
+###### 手机端（右侧菜单会变成下拉形式）:
+![navbar](./effect_img/navbar_phone.png)
 
 ##### HTML
 ```
