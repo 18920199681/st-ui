@@ -16,6 +16,11 @@ js文件夹下的 st-ui.js 文件；
 
 ## 
 ## 导航条
+
+##### 效果演示
+![navbar]
+(https://github.com/18920199681/st-ui/effect_img/navbar_pc.png)
+
 ##### HTML
 ```
 <div class="st_navbar"></div>
@@ -34,7 +39,7 @@ st_navbar({
 });
 ```
 
-#### 参数说明：
+##### 参数说明：
 参数格式：json对象
 
 参数名 | 参数说明
@@ -42,3 +47,4 @@ st_navbar({
 logo | 网站logo
 company_name | 网站表示语言或公司名，在logo右侧
 navbar_menu | 导航菜单，位于导航条右侧
+# 
