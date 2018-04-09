@@ -46,9 +46,67 @@ st_navbar({
 ##### 参数说明：
 参数格式：json对象
 
-参数名 | 参数说明
-----|------
-logo | 网站logo
-company_name | 网站表示语言或公司名，在logo右侧
-navbar_menu | 导航菜单，位于导航条右侧
-# 
+| 参数名          | 参数说明               |
+| ------------ | ------------------ |
+| logo         | 网站logo             |
+| company_name | 网站表示语言或公司名，在logo右侧 |
+| navbar_menu  | 导航菜单，位于导航条右侧       |
+## 
+## 侧边栏
+
+##### 效果演示
+![navbar](./effect_img/st_left_nav.jpg)
+
+##### HTML
+```
+<div class="st_left_navbar">
+    <ul>
+                
+        <!-- 有下级菜单的情况 -->
+        <li class="st_first_nav st_open_second clearFloat">
+            <span class="st_first_nav_title">
+                我是可以展开的
+            </span>
+            <span class="st_first_nav_arrow">
+                <img class="first_menu_arrow_right" src="./images/first_menu_arrow_right.png" />
+                <img class="first_menu_arrow_bottom" src="./images/first_menu_arrow_bottom.png" />
+            </span>
+        </li>
+        <ul class="st_second_nav_box">
+            <li class="st_second_nav st_get_into">二级一</li>
+            <li class="st_second_nav st_get_into">二级二</li>
+        </ul>
+
+        <!-- 没有下级菜单的情况 -->
+        <li class="st_first_nav st_open_second st_get_into clearFloat">
+            <span class="st_first_nav_title">
+                我不可以展开
+            </span>
+            <span class="st_first_nav_arrow">
+                <div class="first_menu_arrow_right"></div>
+                <div class="first_menu_arrow_bottom"></div>
+            </span>
+        </li>
+        <ul class="st_second_nav_box"></ul>
+
+    </ul>
+</div>
+
+<!-- 右侧frame -->
+<div style="width:85%; float:right;">
+    <div class="st_right_frame">
+        可以展开 > 二级一
+    </div>
+    <div class="st_right_frame">
+        可以展开 > 二级二
+    </div>
+    <div class="st_right_frame">
+        我不可以展开
+    </div>
+</div>
+```
+
+##### JavaScript
+```
+st_sidebar();
+```

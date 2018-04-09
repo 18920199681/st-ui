@@ -61,6 +61,19 @@ input::-webkit-input-placeholder {
 }
 
 /**
+ * 侧边栏
+ */
+.st_right_frame {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.st_right_frame:first-child {
+    display: block;
+}
+
+/**
  * 头部导航条
  */
 
@@ -181,6 +194,7 @@ a:hover {
 }
 
 /* 侧边栏 */
+
 .st_left_navbar {
     width: 100%;
     height: 92vh;

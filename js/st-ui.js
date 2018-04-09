@@ -7,7 +7,6 @@ window.onresize = function () {
 * 侧边栏
 */
 function st_sidebar() {
-
     var item = $('body').find('.st_left_navbar li');
     for (var i = 0; i < item.length; i++) {
         item[i].onmouseover = function () {
@@ -18,12 +17,10 @@ function st_sidebar() {
         }
     }
 
-
     var st_first_nav_title = $('body').find('.st_first_nav_title');
     var st_second_nav_box = $('body').find('.st_second_nav_box');
     var first_menu_arrow_right = $('body').find('.first_menu_arrow_right');
     var first_menu_arrow_bottom = $('body').find('.first_menu_arrow_bottom');
-
     for (var i = 0; i < st_first_nav_title.length; i++) {
         st_first_nav_title[i].index = i;
         st_first_nav_title[i].onclick = function () {
@@ -39,10 +36,8 @@ function st_sidebar() {
         }
     }
 
-
     var st_get_into = $('body').find('.st_get_into');
     var st_right_frame = $('body').find('.st_right_frame');
-
     for (var i = 0; i < st_get_into.length; i++) {
         st_get_into[i].index = i;
         st_get_into[i].onclick = function () {
@@ -55,13 +50,10 @@ function st_sidebar() {
 
 }
 
-
-
 /**
 * 头部导航条
 */
 function st_navbar(option) {
-
     var logo = '';
     var company_name = '';
     if (option.logo && typeof (option) == "object") {
@@ -89,7 +81,6 @@ function st_navbar(option) {
                             </div>\
                         </div >\
                     </div >';
-
     $('.st_navbar').html(st_navbar);
 
     var item = [];
@@ -107,25 +98,20 @@ function st_navbar(option) {
     $('.st_navbar_list ul').html(menu_list);
     $('.st_navbar_menu_phone ul').html(menu_list);
 
-
     /**
      * 头部导航条菜单（移动端）
      */
     // 让移动端导航菜单处于收起状态
     $('body').find('.st_navbar_menu_phone').css('top', -($('.st_navbar_menu_phone')[0].offsetHeight));
     $('body').find('.st_navbar_list_btn').on('click', function () {
-
         // 导航条高度
         let st_navbar_height = $('.st_navbar')[0].offsetHeight;
         let old_height = $('.st_navbar')[0].offsetHeight;
-
         // 导航条挡板高度
         let st_navbar_menu_height_box = document.querySelector('.st_navbar_menu_height');
         let st_navbar_menu_height = $('.st_navbar_menu_height')[0].offsetHeight;
-
         // 菜单高度
         let st_navbar_menu_phone = $('.st_navbar_menu_phone')[0].offsetHeight;
-
         // 菜单top
         let st_navbar_menu_phone_top = document.querySelector('.st_navbar_menu_phone');
 
