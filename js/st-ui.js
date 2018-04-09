@@ -3,70 +3,55 @@ window.onresize = function () {
     document.querySelector('html').style.fontSize = document.querySelector('html').clientWidth / 12 + 'px'
 }
 
-
-
 /**
 * 侧边栏
 */
 function st_sidebar() {
-    var item = $('.st_left_navbar .st_first_nav')
+
+    var item = $('body').find('.st_left_navbar li');
     for (var i = 0; i < item.length; i++) {
-        item[i].index = i;
         item[i].onmouseover = function () {
-            item[this.index].style.background = 'white';
+            this.style.background = 'white';
         }
         item[i].onmouseout = function () {
-            item[this.index].style.background = 'gainsboro';
-        }
-    }
-    var st_second_nav = $('.st_second_nav');
-    for (var i = 0; i < st_second_nav.length; i++) {
-        st_second_nav[i].index = i;
-        st_second_nav[i].onmouseover = function () {
-            st_second_nav[this.index].style.background = 'white';
-        }
-        st_second_nav[i].onmouseout = function () {
-            st_second_nav[this.index].style.background = 'gainsboro';
-        }
-    }
-    var st_open_second = $('.st_open_second');
-    var st_second_nav_box = $('.st_second_nav_box');
-    var first_menu_arrow_right = $('.first_menu_arrow_right');
-    var first_menu_arrow_bottom = $('.first_menu_arrow_bottom');
-    var st_first_nav = $('.st_first_nav');
-    if (st_open_second) {
-        for (var i = 0; i < st_first_nav.length; i++) {
-            st_first_nav[i].onclick = function () {
-                for (var j = 0; j < st_open_second.length; j++) {
-                    st_second_nav_box[j].style.display = 'none';
-                    first_menu_arrow_bottom[j].style.display = 'none';
-                    first_menu_arrow_right[j].style.display = 'block';
-                }
-            }
-        }
-        for (var i = 0; i < st_open_second.length; i++) {
-            st_open_second[i].index = i;
-            st_open_second[i].onclick = function () {
-                for (var j = 0; j < st_open_second.length; j++) {
-                    st_second_nav_box[j].style.display = 'none';
-                    first_menu_arrow_bottom[j].style.display = 'none';
-                    first_menu_arrow_right[j].style.display = 'block';
-                }
-                st_second_nav_box[this.index].style.display = 'block';
-                first_menu_arrow_bottom[this.index].style.display = 'block';
-                first_menu_arrow_right[this.index].style.display = 'none';
-            }
+            this.style.background = 'gainsboro';
         }
     }
 
-    // 不包含下级菜单部分的点击事件
-    // var st_get_into = $('.st_get_into');
-    // for (var i = 0; i < st_get_into.length; i++) {
-    //     st_get_into[i].index = i;
-    //     st_get_into[i].onclick = function () {
-    //         console.log(this.index);
-    //     }
-    // }
+
+    var st_first_nav_title = $('body').find('.st_first_nav_title');
+    var st_second_nav_box = $('body').find('.st_second_nav_box');
+    var first_menu_arrow_right = $('body').find('.first_menu_arrow_right');
+    var first_menu_arrow_bottom = $('body').find('.first_menu_arrow_bottom');
+
+    for (var i = 0; i < st_first_nav_title.length; i++) {
+        st_first_nav_title[i].index = i;
+        st_first_nav_title[i].onclick = function () {
+
+            for (var j = 0; j < st_first_nav_title.length; j++) {
+                st_second_nav_box[j].style.display = 'none';
+                first_menu_arrow_right[j].style.display = 'block';
+                first_menu_arrow_bottom[j].style.display = 'none';
+            }
+            st_second_nav_box[this.index].style.display = 'block';
+            first_menu_arrow_right[this.index].style.display = 'none';
+            first_menu_arrow_bottom[this.index].style.display = 'block';
+        }
+    }
+
+
+    var st_get_into = $('body').find('.st_get_into');
+    var st_right_frame = $('body').find('.st_right_frame');
+
+    for (var i = 0; i < st_get_into.length; i++) {
+        st_get_into[i].index = i;
+        st_get_into[i].onclick = function () {
+            for (let j = 0; j < st_get_into.length; j++) {
+                st_right_frame[j].style.display = 'none';
+            }
+            st_right_frame[this.index].style.display = 'block';
+        }
+    }
 
 }
 

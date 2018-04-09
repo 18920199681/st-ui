@@ -16,6 +16,16 @@
     <title>st-ui</title>
 
     <style>
+        .st_right_frame {
+            width: 100%;
+            height: 100%;
+            background: red;
+            display: none;
+        }
+
+        .st_right_frame:first-child {
+            display: block;
+        }
     </style>
 </head>
 
@@ -28,7 +38,7 @@
     </div>
 
     <!-- 用户自定义部分 -->
-    <div style="width:15%; height:120vh; position:fixed; top:8vh;">
+    <div style="width:15%; height:120vh; position:fixed; top:8vh; left:0;">
 
         <!-- 侧边栏 -->
         <!-- st_open_second: 包含二级菜单，点击只能展开 -->
@@ -51,9 +61,23 @@
                     <li class="st_second_nav st_get_into">二级三</li>
                 </ul>
 
-                <li class="st_first_nav st_open_second clearFloat">
+                <!-- 没有下级菜单的情况 -->
+                <li class="st_first_nav st_open_second st_get_into clearFloat">
                     <span class="st_first_nav_title">
                         第二个
+                    </span>
+                    <span class="st_first_nav_arrow">
+                        <!-- img 改为 div 占位 -->
+                        <div class="first_menu_arrow_right"></div>
+                        <div class="first_menu_arrow_bottom"></div>
+                    </span>
+                </li>
+                <!-- 空 ul 占位 -->
+                <ul class="st_second_nav_box"></ul>
+
+                <li class="st_first_nav st_open_second clearFloat">
+                    <span class="st_first_nav_title">
+                        第三个
                     </span>
                     <span class="st_first_nav_arrow">
                         <img class="first_menu_arrow_right" src="./images/first_menu_arrow_right.png" />
@@ -65,10 +89,48 @@
                     <li class="st_second_nav st_get_into">二级二</li>
                 </ul>
 
-                <li class="st_first_nav st_get_into">第三个</li>
+
+                <!-- 没有下级菜单的情况 -->
+                <li class="st_first_nav st_open_second st_get_into clearFloat">
+                    <span class="st_first_nav_title">
+                        第四个
+                    </span>
+                    <span class="st_first_nav_arrow">
+                        <!-- img 改为 div 占位 -->
+                        <div class="first_menu_arrow_right"></div>
+                        <div class="first_menu_arrow_bottom"></div>
+                    </span>
+                </li>
+                <!-- 空 ul 占位 -->
+                <ul class="st_second_nav_box"></ul>
+
             </ul>
         </div>
 
+    </div>
+
+    <div style="width:85%; float:right;">
+        <div class="st_right_frame">
+            二级一
+        </div>
+        <div class="st_right_frame">
+            二级二
+        </div>
+        <div class="st_right_frame">
+            二级三
+        </div>
+        <div class="st_right_frame">
+            第二个
+        </div>
+        <div class="st_right_frame">
+            二级一
+        </div>
+        <div class="st_right_frame">
+            二级二
+        </div>
+        <div class="st_right_frame">
+            第四个
+        </div>
     </div>
 
     <script src="./js/jquery-1.10.1.min.js"></script>
